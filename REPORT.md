@@ -29,6 +29,11 @@ Số liệu từ [openloop.json](evidence/openloop.json), [closedloop.json](evid
 
 Mã gốc chỉ lưu L2 trung bình/độ lệch chuẩn của PercMLP+, không lưu L2 từng seed trong `openloop.json`; vì vậy không suy ra hay bịa dải min–max này. Dải va chạm của cả ba mô hình học có đủ trong `closedloop.json`.
 
+## Kiểm tra nộp bài
+
+Toàn bộ 25 unittest đã đạt. Lượt `scripts/check_submission.py --save-verify` được lưu tại [verify.txt](evidence/verify.txt) ghi 55 PASS, 0 FAIL và 1 WARN về trạng thái Git lúc kiểm tra; đây là kiểm tra tính đầy đủ/nhất quán của hồ sơ, không phải quyết định phát hành mô hình.
+Sau khi commit báo cáo và bằng chứng, `.venv/` vẫn chưa được Git theo dõi vì `.gitignore` gốc thiếu quy tắc cho thư mục này. Không đưa `.venv/`, `data/` hoặc `work/` vào bài nộp; giữ nguyên `.gitignore` theo phạm vi đề cho phép.
+
 ## Câu 1 · Dữ liệu
 
 Bước 0 bạn phát hiện những vấn đề gì ở dữ liệu? Vì sao không dùng cột `Acc_LV`, và bạn thay bằng gì? Bao nhiêu quỹ đạo bị loại vì trùng, và vì sao chia theo quỹ đạo?
